@@ -2,7 +2,7 @@
 namespace App\Controllers;
 
 use App\Models\PublicationModel;
-
+use App\Models\LikeModel;
 class Publication extends BaseController
 {
     // Mur général (tous les posts)
@@ -54,9 +54,46 @@ class Publication extends BaseController
 
             $pubModel->save($data);
 
-            // return redirect()->to(base_url('publication/index/' . $userId));
+            return redirect()->to(base_url($userId));
         }
 
         return view('Publication');
+    }
+
+
+    public function suppression($pubId, $userId)
+    {
+        $pubModel = new PublicationModel();
+
+        $publication = $pubModel->find($pubId);
+        if ($publication && $publication['id_utilisateur'] == $userId) {
+            $pubModel->delete($pubId);
+            return redirect()->to(base_url($userId));
+        } else {
+            return redirect()->back()->with('error', 'Vous ne pouvez pas supprimer cette publication.');
+        }
+    }
+
+    public function likeAjout($publicationID,$userId=null){
+        $likeModel = new LikeModel();
+        $pubModel = new PublicationModel();
+        $publication = $pubModel->find($publicationID);
+        $publication = $pubModel->getPublicationWithUser($publicationID);
+        $auteurName = $publication['userName'];
+        $message = 'salut'.$auteurName;
+
+        if (!$userId) {
+            $userId = session()->get('id_utilisateur');
+        }
+
+        $data = [
+            'id_utilisateur'=>$userId,
+            'id_publication'=>$publicationID,
+            'message'=> $message
+        ];
+
+        $likeModel->save($data);
+
+        return redirect()->to(base_url($userId . '/message'));
     }
 }

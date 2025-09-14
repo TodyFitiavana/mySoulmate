@@ -9,7 +9,6 @@ class PublicationModel extends Model
     protected $primaryKey    = 'id';
     protected $allowedFields = ['contenu', 'image', '_date', 'id_utilisateur'];
 
-    // Toutes les publications
     public function getAllPublications()
     {
         return $this->select('publication.*, utilisateur.prenom as userName')
@@ -18,7 +17,6 @@ class PublicationModel extends Model
                     ->findAll();
     }
 
-    // Publications d'un utilisateur précis
     public function getPublicationsByUser($userId)
     {
         return $this->select('publication.*, utilisateur.prenom as userName')
@@ -26,5 +24,13 @@ class PublicationModel extends Model
                     ->where('publication.id_utilisateur', $userId)
                     ->orderBy('publication._date', 'DESC')
                     ->findAll();
+    }
+
+    public function getPublicationWithUser($publicationID)
+    {
+            return $this->select('publication.*, utilisateur.prenom as userName')
+                        ->join('utilisateur', 'utilisateur.id = publication.id_utilisateur')
+                        ->where('publication.id', $publicationID)
+                        ->first();
     }
 }

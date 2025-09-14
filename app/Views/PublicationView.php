@@ -41,7 +41,7 @@
                 <span class="text-xs">Mes pubs</span>
             </a>
 
-            <a href="<?= base_url($userId.'/messages') ?>" 
+            <a href="<?= base_url($userId.'/message') ?>" 
                class="hover:text-green-600 flex flex-col items-center">
                 <i class="fas fa-envelope"></i>
                 <span class="text-xs">Messages</span>
@@ -63,16 +63,26 @@
         <?php foreach ($publication as $pub) : ?>
             <div class="bg-white shadow-md rounded-xl p-4">
                 
-                <div class="flex items-center mb-3">
-                    <div class="w-10 h-10 bg-green-400 text-white flex items-center justify-center rounded-full font-bold">
-                        <?= strtoupper(substr($pub['userName'], 0, 1)) ?>
+                <div class="flex justify-between">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 bg-green-400 text-white flex items-center justify-center rounded-full font-bold">
+                            <?= strtoupper(substr($pub['userName'], 0, 1)) ?>
+                        </div>
+                        <div class="ml-3">
+                            <p class="font-semibold"><?= esc($pub['userName']) ?></p>
+                            <p class="text-xs text-gray-500"><?= date('d M Y H:i', strtotime($pub['_date'])) ?></p>
+                        </div>
                     </div>
-                    <div class="ml-3">
-                        <p class="font-semibold"><?= esc($pub['userName']) ?></p>
-                        <p class="text-xs text-gray-500"><?= date('d M Y H:i', strtotime($pub['_date'])) ?></p>
-                    </div>
+                    <?php if ($pub['id_utilisateur'] == $userId) : ?>
+                        <div class="absolut top-10">
+                            <a href="<?= base_url($pub['id'] . '/' . $userId). '/delete'?>"
+                            class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-lg text-sm"
+                            onclick="return confirm('Voulez-vous vraiment supprimer cette publication ?');">
+                                Supprimer
+                            </a>
+                        </div>
+                    <?php endif; ?>
                 </div>
-
                 <p class="text-gray-800 mb-3"><?= esc($pub['contenu']) ?></p>
 
                 <?php if (!empty($pub['image'])) : ?>
@@ -83,18 +93,22 @@
                     </div>
                 <?php endif; ?>
 
+                
+
                 <div class="flex justify-center text-gray-500 text-sm">
-                    <button 
-                        class="bg-gradient-to-r from-green-500 to-emerald-600 text-white 
-                        px-16 py-4 rounded-xl text-[22px] font-semibold shadow-lg
-                        transform transition-all duration-300 ease-in-out group
-                        hover:scale-105 hover:shadow-[0_0_20px_#4ade80] hover:from-green-600 hover:to-emerald-700 
-                        active:scale-98 active:translate-y-0.5 active:shadow-md">
-                        <span class="transform transition-all duration-300 ease-in-out 
-                                    group-hover:-translate-y-px group-hover:filter group-hover:drop-shadow-lg">
-                            fait votre premier pas à <?= esc($pub['userName']) ?>
-                        </span>
-                    </button>
+                   
+                        <a href="<?= base_url($pub['id'] . '/' . $userId.'/like') ?>"
+                            class="bg-gradient-to-r from-green-500 to-emerald-600 text-white 
+                            px-16 py-4 rounded-xl text-[22px] font-semibold shadow-lg
+                            transform transition-all duration-300 ease-in-out group
+                            hover:scale-105 hover:shadow-[0_0_20px_#4ade80] hover:from-green-600 hover:to-emerald-700 
+                            active:scale-98 active:translate-y-0.5 active:shadow-md">
+                            <span class="transform transition-all duration-300 ease-in-out 
+                                        group-hover:-translate-y-px group-hover:filter group-hover:drop-shadow-lg">
+                                fait votre premier pas à <?= esc($pub['userName']) ?>
+                            </span>
+                        </a>
+                    
                 </div>
             </div>
         <?php endforeach; ?>

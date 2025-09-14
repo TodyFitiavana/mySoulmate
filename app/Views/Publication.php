@@ -40,7 +40,7 @@
                     <span class="text-xs">Mes pubs</span>
                 </a>
 
-                <a href="<?= base_url($userId.'/messages') ?>" 
+                <a href="<?= base_url($userId.'/message') ?>" 
                 class="hover:text-green-600 flex flex-col items-center">
                     <i class="fas fa-envelope"></i>
                     <span class="text-xs">Messages</span>

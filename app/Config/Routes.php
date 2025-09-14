@@ -12,5 +12,6 @@ $routes->get('/(:num)/publication' ,'Publication::index/$1');
 $routes->get('/(:num)' ,'Publication::allPublication/$1');
 $routes->get('/(:num)/creation','Publication::creation/$1');
 $routes->post('/(:num)/creation','Publication::creation/$1');
-
-
+$routes->get('/(:num)/(:num)/delete','Publication::suppression/$1/$2');
+$routes->get('/(:num)/(:num)/like','Publication::likeAjout/$1/$2');
+$routes->get('/(:num)/message','Message::index/$1');
