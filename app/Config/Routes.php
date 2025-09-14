@@ -5,13 +5,12 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
+// $routes->get('/', 'Calculatrice::index');
+// $routes->post('/', 'Calculatrice::calcule');
+$routes->get('/home' ,'Home::index');
+$routes->get('/about','Home::about');
+$routes->get('/' ,'Publication::index');
+$routes->get('/creation','Publication::creation');
+$routes->post('/creation','Publication::creation');
 
-// $routes->get('/' ,'Utilisateur::index');
-// $routes->get('/about','Home::about');
-$routes->get('/(:num)/publication' ,'Publication::index/$1');
-$routes->get('/(:num)' ,'Publication::allPublication/$1');
-$routes->get('/(:num)/creation','Publication::creation/$1');
-$routes->post('/(:num)/creation','Publication::creation/$1');
-$routes->get('/(:num)/(:num)/delete','Publication::suppression/$1/$2');
-$routes->get('/(:num)/(:num)/like','Publication::likeAjout/$1/$2');
-$routes->get('/(:num)/message','Message::index/$1');
+
