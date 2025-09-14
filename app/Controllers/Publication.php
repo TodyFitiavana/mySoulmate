@@ -1,38 +1,99 @@
 <?php
-    namespace App\Controllers;
+namespace App\Controllers;
 
-    use App\Models\PublicationModel;
+use App\Models\PublicationModel;
+use App\Models\LikeModel;
+class Publication extends BaseController
+{
+    // Mur général (tous les posts)
+    public function allPublication()
+    {
+        $pubModel = new PublicationModel();
+        $data['publication'] = $pubModel->getAllPublications();
+        return view('PublicationView', $data);
+    }
 
-    class Publication extends BaseController{
-        public function index(){
-            $pubModel = new PublicationModel();
-            $data['publication'] = $pubModel->findAll();
-            return view('PublicationView',$data);
+    // Mur personnel (posts utilisateur connecté)
+    public function index($userId = null)
+    {
+        $pubModel = new PublicationModel();
+
+        if (!$userId) {
+            $userId = session()->get('id_utilisateur');
         }
 
-        public function creation(){
-            $pubModel = new PublicationModel();
-            if($this->request->getPost()){
-                $imageFile = $this->request->getFile('image');
-                $imageNom = null;
+        $data['publication'] = $pubModel->getPublicationsByUser($userId);
 
-                if($imageFile && $imageFile->isValid() && ! $imageFile->hasMoved()){
-                    $imageNom = $imageFile->getRandomName();
-                    $imageFile->move(FCPATH . 'uploads' , $imageNom);
-                }
+        return view('PublicationView', $data);
+    }
 
-                $data = [
-                    'contenu'=> $this->request->getPost('contenu'),
-                    'image'=>$imageNom,
-                    '_date'=>date('Y-m-d H:i:s')
+    // Création de publication
+    public function creation($userId = null)
+    {
+        $pubModel = new PublicationModel();
 
-                ];
+        if (!$userId) {
+            $userId = session()->get('id_utilisateur');
+        }
 
-                $pubModel->save($data);
-                return redirect()->to(base_url(''));
+        if ($this->request->getPost()) {
+            $imageFile = $this->request->getFile('image');
+            $imageNom = null;
+
+            if ($imageFile && $imageFile->isValid() && !$imageFile->hasMoved()) {
+                $imageNom = $imageFile->getRandomName();
+                $imageFile->move(ROOTPATH . 'public/uploads', $imageNom);
             }
-            
-            return view('Publication');
+
+            $data = [
+                'contenu'        => $this->request->getPost('contenu'),
+                'image'          => $imageNom,
+                '_date'          => date('Y-m-d H:i:s'),
+                'id_utilisateur' => $userId
+            ];
+
+            $pubModel->save($data);
+
+            return redirect()->to(base_url($userId));
+        }
+
+        return view('Publication');
+    }
+
+
+    public function suppression($pubId, $userId)
+    {
+        $pubModel = new PublicationModel();
+
+        $publication = $pubModel->find($pubId);
+        if ($publication && $publication['id_utilisateur'] == $userId) {
+            $pubModel->delete($pubId);
+            return redirect()->to(base_url($userId));
+        } else {
+            return redirect()->back()->with('error', 'Vous ne pouvez pas supprimer cette publication.');
         }
     }
-?>
+
+    public function likeAjout($publicationID,$userId=null){
+        $likeModel = new LikeModel();
+        $pubModel = new PublicationModel();
+        $publication = $pubModel->find($publicationID);
+        $publication = $pubModel->getPublicationWithUser($publicationID);
+        $auteurName = $publication['userName'];
+        $message = 'salut'.$auteurName;
+
+        if (!$userId) {
+            $userId = session()->get('id_utilisateur');
+        }
+
+        $data = [
+            'id_utilisateur'=>$userId,
+            'id_publication'=>$publicationID,
+            'message'=> $message
+        ];
+
+        $likeModel->save($data);
+
+        return redirect()->to(base_url($userId . '/message'));
+    }
+}
