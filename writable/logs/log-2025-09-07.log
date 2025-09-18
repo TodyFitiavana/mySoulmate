@@ -1,0 +1,135 @@
+CRITICAL - 2025-09-07 12:53:46 --> ParseError: syntax error, unexpected token "<"
+[Method: GET, Route: /]
+in APPPATH\Views\Calculatrice.php on line 23.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('Calculatrice', [], true)
+ 3 APPPATH\Controllers\Calculatrice.php(5): view('Calculatrice')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Calculatrice->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calculatrice))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\laragonISAIA\\public\\index.php')
+CRITICAL - 2025-09-07 13:09:00 --> TypeError: Unsupported operand types: string + string
+[Method: POST, Route: /]
+in APPPATH\Controllers\Calculatrice.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Calculatrice->calcule()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calculatrice))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\laragonISAIA\\public\\index.php')
+CRITICAL - 2025-09-07 13:09:07 --> TypeError: Unsupported operand types: string + string
+[Method: POST, Route: /]
+in APPPATH\Controllers\Calculatrice.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Calculatrice->calcule()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calculatrice))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\laragonISAIA\\public\\index.php')
+CRITICAL - 2025-09-07 13:28:40 --> ParseError: syntax error, unexpected token "=", expecting "]"
+[Method: GET, Route: /]
+in APPPATH\Views\Home.php on line 14.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('Home', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('Home')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\laragonISAIA\\public\\index.php')
+CRITICAL - 2025-09-07 13:28:42 --> ParseError: syntax error, unexpected token "=", expecting "]"
+[Method: GET, Route: /]
+in APPPATH\Views\Home.php on line 14.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('Home', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('Home')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\laragonISAIA\\public\\index.php')
+CRITICAL - 2025-09-07 13:31:21 --> ErrorException: Undefined variable $text
+[Method: GET, Route: /]
+in APPPATH\Views\components\Button.php on line 11.
+ 1 APPPATH\Views\components\Button.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $text', 'C:\\laragon\\www\\laragonISAIA\\app\\Views\\components\\Button.php', 11)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\laragonISAIA\\app\\Views\\components\\Button.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('components/Button', [], true)
+ 5 APPPATH\Views\Home.php(13): view('components/Button', [...])
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\laragonISAIA\\app\\Views\\Home.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('Home', [], true)
+ 9 APPPATH\Controllers\Home.php(9): view('Home')
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\laragonISAIA\\public\\index.php')
+CRITICAL - 2025-09-07 13:31:51 --> ErrorException: Undefined variable $text
+[Method: GET, Route: /]
+in APPPATH\Views\components\Button.php on line 11.
+ 1 APPPATH\Views\components\Button.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $text', 'C:\\laragon\\www\\laragonISAIA\\app\\Views\\components\\Button.php', 11)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\laragonISAIA\\app\\Views\\components\\Button.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('components/Button', [], true)
+ 5 APPPATH\Views\Home.php(13): view('components/Button', [...])
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\laragonISAIA\\app\\Views\\Home.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('Home', [], true)
+ 9 APPPATH\Controllers\Home.php(9): view('Home')
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\laragonISAIA\\public\\index.php')
+CRITICAL - 2025-09-07 13:31:53 --> ErrorException: Undefined variable $text
+[Method: GET, Route: /]
+in APPPATH\Views\components\Button.php on line 11.
+ 1 APPPATH\Views\components\Button.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $text', 'C:\\laragon\\www\\laragonISAIA\\app\\Views\\components\\Button.php', 11)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\laragonISAIA\\app\\Views\\components\\Button.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('components/Button', [], true)
+ 5 APPPATH\Views\Home.php(13): view('components/Button', [...])
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\laragonISAIA\\app\\Views\\Home.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('Home', [], true)
+ 9 APPPATH\Controllers\Home.php(9): view('Home')
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\laragonISAIA\\public\\index.php')
+CRITICAL - 2025-09-07 13:31:54 --> ErrorException: Undefined variable $text
+[Method: GET, Route: /]
+in APPPATH\Views\components\Button.php on line 11.
+ 1 APPPATH\Views\components\Button.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $text', 'C:\\laragon\\www\\laragonISAIA\\app\\Views\\components\\Button.php', 11)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\laragonISAIA\\app\\Views\\components\\Button.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('components/Button', [], true)
+ 5 APPPATH\Views\Home.php(13): view('components/Button', [...])
+ 6 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\laragonISAIA\\app\\Views\\Home.php')
+ 7 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('Home', [], true)
+ 9 APPPATH\Controllers\Home.php(9): view('Home')
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\laragonISAIA\\public\\index.php')

@@ -1,0 +1,30 @@
+CRITICAL - 2025-09-05 05:16:57 --> DivisionByZeroError: Division by zero
+[Method: POST, Route: /]
+in APPPATH\Controllers\Calculatrice.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Calculatrice->calcule()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calculatrice))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\laragonISAIA\\public\\index.php')
+CRITICAL - 2025-09-05 06:07:50 --> TypeError: Unsupported operand types: string + string
+[Method: POST, Route: /]
+in APPPATH\Controllers\Calculatrice.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Calculatrice->calcule()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calculatrice))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\laragonISAIA\\public\\index.php')
+CRITICAL - 2025-09-05 06:09:25 --> TypeError: Unsupported operand types: string + string
+[Method: POST, Route: /]
+in APPPATH\Controllers\Calculatrice.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Calculatrice->calcule()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calculatrice))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\laragonISAIA\\public\\index.php')
