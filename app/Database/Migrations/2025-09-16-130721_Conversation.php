@@ -30,7 +30,7 @@ class Conversation extends Migration
             
         ]);
         $this->forge->addKey('id', true); // clé primaire
-        $this->forge->createTable('conversation');
+        $this->forge->createTable('conversation',true);
 
     }
 

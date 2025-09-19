@@ -39,7 +39,7 @@ class MembreConversation extends Migration
         $this->forge->addForeignKey('id_conversation', 'conversation', 'id', 'CASCADE', 'CASCADE');
         $this->forge->addForeignKey('id_user', 'utilisateur', 'id', 'CASCADE', 'CASCADE');
 
-        $this->forge->createTable('membre_conversation');
+        $this->forge->createTable('membre_conversation',true);
     }
 
     public function down()

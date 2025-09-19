@@ -115,7 +115,7 @@ class ChatController extends BaseController
                 return "Erreur lors de l'insertion.";
             } else {
                 $db->transCommit();
-                return "Message envoyé avec succès !";
+                return "<script>alert('Message envoyé avec succès !'); window.location.href='/chat1/{$receiver_id}';</script>";
             }
             return redirect()->to("/chat1/{$receiver_id}");
         } catch (\Exception $e) {

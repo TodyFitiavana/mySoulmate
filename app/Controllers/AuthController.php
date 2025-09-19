@@ -79,9 +79,13 @@ class AuthController extends BaseController
         $matricule = $this->request->getPost('matricule');
         $password = $this->request->getPost('password');
 
+        echo $matricule;
+
         $user = $model->where('matricule', $matricule)->first();
+        
 
         if ($user) {
+            // dd($password, $user['password_hash']);
             if (password_verify($password, $user['password_hash'])) {
                 $session = session();
                 $session->set([

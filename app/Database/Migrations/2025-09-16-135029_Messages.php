@@ -49,7 +49,7 @@ class Messages extends Migration
         $this->forge->addForeignKey('id_expediteur', 'utilisateur', 'id', 'CASCADE', 'CASCADE');
         $this->forge->addForeignKey('id_recepteur', 'utilisateur', 'id', 'CASCADE', 'CASCADE');
 
-        $this->forge->createTable('messages');
+        $this->forge->createTable('messages',true);
     }
 
     public function down()

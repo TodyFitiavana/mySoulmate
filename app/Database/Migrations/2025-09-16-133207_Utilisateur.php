@@ -18,7 +18,7 @@ class Utilisateur extends Migration
             ],
             'first_name' => [
                 'type' => 'VARCHAR',
-                'constraint' => '55',
+                'constraint' => '50',
                 'null' => false
             ],
             'last_name' => [
@@ -53,7 +53,7 @@ class Utilisateur extends Migration
         ]);
 
         $this->forge->addKey('id', true); // clé primaire
-        $this->forge->createTable('utilisateur');
+        $this->forge->createTable('utilisateur',true);
     }
 
     public function down()
