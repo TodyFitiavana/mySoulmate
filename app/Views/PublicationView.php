@@ -6,19 +6,20 @@
     <title>Publications</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="<?= base_url('css/auth.css') ?>">
 </head>
 <body class="bg-gray-100 min-h-screen">
 
 <?php 
-    // $userId = session()->get('id_utilisateur');
-    // $userName = session()->get('prenom');
+    $userId = session()->get('user_id');
+    $userName = session()->get('last_name');
     // $avatar = session()->get('avatar') ?? 'ispm.png';
-    $userId = 1;
-    $userName = 'Tody Fitiavana';
+    // $userId = 1;
+    // $userName = 'Tody Fitiavana';
     $avatar = 'ispm.png';
 ?>
 
-<header class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+<!-- <header class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
     <div class="max-w-6xl mx-auto flex justify-between items-center p-3">
         
         <div class="flex items-center space-x-3">
@@ -48,7 +49,42 @@
             </a>
         </nav>
     </div>
-</header>
+</header> -->
+<nav class="navbar">
+        <div class="nav-brand">
+            <h1>💚 mySoulmate</h1>
+        </div>
+        <div class="nav-menu">
+            <a href="<?= base_url('/dashboard') ?>" class="nav-item active">
+                <span class="nav-icon">📰</span>
+                Amies
+            </a>
+            <a href="<?= base_url('/'.$userId.'/AllPublication') ?>" class="nav-item active">
+                <span class="nav-icon">📰</span>
+                publication
+            </a>
+            <a href="<?= base_url('/'.$userId.'/publication') ?>" class="nav-item active">
+                <span class="nav-icon">📰</span>
+                Mypublication
+            </a>
+            <a href="<?= base_url('/chat') ?>" class="nav-item">
+                <span class="nav-icon">💬</span>
+                Messages
+            </a>
+            <a href="<?= base_url('/profile') ?>" class="nav-item active">
+                <span class="nav-icon">👤</span>
+                Profil
+            </a>
+        </div>
+        <div class="nav-search">
+            <input type="text" placeholder="Rechercher..." id="searchInput">
+            <span class="search-icon">🔍</span>
+        </div>
+        <div class="nav-logout">
+            <a href="<?= base_url('/auth') ?>" class="btn-logout">Déconnexion</a>
+        </div>
+    </nav>
+
 
 <div class="pt-24 max-w-2xl mx-auto py-6 space-y-6">
 

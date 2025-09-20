@@ -583,10 +583,13 @@ video {
   position: static;
 }
 
+<<<<<<< HEAD
 .fixed {
   position: fixed;
 }
 
+=======
+>>>>>>> mirado
 .absolute {
   position: absolute;
 }
@@ -595,6 +598,7 @@ video {
   position: relative;
 }
 
+<<<<<<< HEAD
 .left-0 {
   left: 0px;
 }
@@ -636,18 +640,24 @@ video {
   margin-right: 0.5rem;
 }
 
+=======
+>>>>>>> mirado
 .block {
   display: block;
 }
 
+<<<<<<< HEAD
 .flex {
   display: flex;
 }
 
+=======
+>>>>>>> mirado
 .table {
   display: table;
 }
 
+<<<<<<< HEAD
 .hidden {
   display: none;
 }
@@ -688,6 +698,8 @@ video {
   width: 2.5rem;
 }
 
+=======
+>>>>>>> mirado
 .w-52 {
   width: 13rem;
 }
@@ -696,6 +708,7 @@ video {
   width: 200px;
 }
 
+<<<<<<< HEAD
 .w-full {
   width: 100%;
 }
@@ -824,6 +837,8 @@ video {
   border-radius: 9999px;
 }
 
+=======
+>>>>>>> mirado
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -832,14 +847,18 @@ video {
   border-radius: 0.125rem;
 }
 
+<<<<<<< HEAD
 .rounded-xl {
   border-radius: 0.75rem;
 }
 
+=======
+>>>>>>> mirado
 .border {
   border-width: 1px;
 }
 
+<<<<<<< HEAD
 .border-0 {
   border-width: 0px;
 }
@@ -852,6 +871,11 @@ video {
 .bg-blue-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(96 165 250 / var(--tw-bg-opacity, 1));
+=======
+.border-sky-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(224 242 254 / var(--tw-border-opacity, 1));
+>>>>>>> mirado
 }
 
 .bg-blue-500 {
@@ -859,6 +883,7 @@ video {
   background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
 }
 
+<<<<<<< HEAD
 .bg-blue-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
@@ -869,11 +894,14 @@ video {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
 }
 
+=======
+>>>>>>> mirado
 .bg-slate-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(100 116 139 / var(--tw-bg-opacity, 1));
 }
 
+<<<<<<< HEAD
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
@@ -982,6 +1010,8 @@ video {
   padding-right: 1.5rem;
 }
 
+=======
+>>>>>>> mirado
 .pb-3 {
   padding-bottom: 0.75rem;
 }
@@ -998,6 +1028,7 @@ video {
   padding-top: 0.75rem;
 }
 
+<<<<<<< HEAD
 .pt-5 {
   padding-top: 1.25rem;
 }
@@ -1034,20 +1065,26 @@ video {
   padding-top: 6rem;
 }
 
+=======
+>>>>>>> mirado
 .text-center {
   text-align: center;
 }
 
+<<<<<<< HEAD
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
+=======
+>>>>>>> mirado
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
+<<<<<<< HEAD
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -1274,6 +1311,11 @@ video {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+=======
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity, 1));
+>>>>>>> mirado
 }
 
 .hover\:bg-blue-500:hover {
@@ -1281,6 +1323,7 @@ video {
   background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
 }
 
+<<<<<<< HEAD
 .hover\:bg-blue-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
@@ -1424,4 +1467,9 @@ video {
   .sm\:inline {
     display: inline;
   }
+=======
+.hover\:bg-red-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity, 1));
+>>>>>>> mirado
 }
