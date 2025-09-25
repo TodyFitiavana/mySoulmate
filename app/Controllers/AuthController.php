@@ -95,7 +95,7 @@ class AuthController extends BaseController
                     'isLoggedIn' => true
                 ]);
 
-                return redirect()->to($user['id'].'/publication');
+                return redirect()->to(.$user['id'].'/publication');
             } else {
                 $message = ['message' => 'Mot de passe Incorrect'];
                 return view('Authentification/SignUp')
