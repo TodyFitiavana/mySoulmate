@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="<?= base_url('css/auth.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
 </head>
 <body class="bg-gray-100 min-h-screen">
 
@@ -18,47 +19,11 @@
     // $userName = 'Tody Fitiavana';
     $avatar = 'ispm.png';
 ?>
-
-<!-- <header class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center p-3">
-        
-        <div class="flex items-center space-x-3">
-            <img src="<?= base_url('public/uploads/avatars/' . $avatar) ?>" 
-                 alt="avatar" 
-                 class="w-10 h-10 rounded-full object-cover border">
-            <span class="font-semibold text-gray-700"><?= esc($userName) ?></span>
-        </div>
-
-        <nav class="flex space-x-8 text-gray-600 text-xl">
-            <a href="<?= base_url('/'.$userId) ?>" 
-               class="hover:text-green-600 flex flex-col items-center">
-                <i class="fas fa-home"></i>
-                <span class="text-xs">Accueil</span>
-            </a>
-
-            <a href="<?= base_url($userId.'/publication') ?>" 
-               class="hover:text-green-600 flex flex-col items-center">
-                <i class="fas fa-pencil-alt"></i>
-                <span class="text-xs">Mes pubs</span>
-            </a>
-
-            <a href="<?= base_url($userId.'/message') ?>" 
-               class="hover:text-green-600 flex flex-col items-center">
-                <i class="fas fa-envelope"></i>
-                <span class="text-xs">Messages</span>
-            </a>
-        </nav>
-    </div>
-</header> -->
 <nav class="navbar">
         <div class="nav-brand">
             <h1>💚 mySoulmate</h1>
         </div>
         <div class="nav-menu">
-            <a href="<?= base_url('/dashboard') ?>" class="nav-item active">
-                <span class="nav-icon">📰</span>
-                Amies
-            </a>
             <a href="<?= base_url('/'.$userId.'/AllPublication') ?>" class="nav-item active">
                 <span class="nav-icon">📰</span>
                 publication
@@ -130,22 +95,23 @@
                 <?php endif; ?>
 
                 
+                    <form action="<?= base_url('/message') ?>" method="post" class="flex justify-center text-gray-500 text-sm">
+                            <?= csrf_field() ?>
 
-                <div class="flex justify-center text-gray-500 text-sm">
-                   
-                        <a href="<?= base_url($pub['id'] . '/' . $userId.'/like') ?>"
-                            class="bg-gradient-to-r from-green-500 to-emerald-600 text-white 
+                            <!-- On ajoute l'ID du destinataire -->
+                            <input type="hidden" name="receiver_name" value="<?= esc($pub['userName']) ?>">
+                            <input type="hidden" name="receiver_id" value="<?= esc($pub['id']) ?>">
+
+                            <button type="submit" class="bg-gradient-to-r from-green-500 to-emerald-600 text-white 
                             px-16 py-4 rounded-xl text-[22px] font-semibold shadow-lg
                             transform transition-all duration-300 ease-in-out group
                             hover:scale-105 hover:shadow-[0_0_20px_#4ade80] hover:from-green-600 hover:to-emerald-700 
-                            active:scale-98 active:translate-y-0.5 active:shadow-md">
-                            <span class="transform transition-all duration-300 ease-in-out 
+                            active:scale-98 active:translate-y-0.5 active:shadow-md"><span class="transform transition-all duration-300 ease-in-out 
                                         group-hover:-translate-y-px group-hover:filter group-hover:drop-shadow-lg">
                                 fait votre premier pas à <?= esc($pub['userName']) ?>
-                            </span>
-                        </a>
+                            </span></button>
+                    </form>
                     
-                </div>
             </div>
         <?php endforeach; ?>
     <?php else : ?>

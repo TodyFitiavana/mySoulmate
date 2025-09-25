@@ -63,6 +63,7 @@
                             <?= csrf_field() ?>
 
                             <!-- On ajoute l'ID du destinataire -->
+                             <input type="hidden" name="receiver_name" value="<?= esc($v['last_name']) ?>">
                             <input type="hidden" name="receiver_id" value="<?= esc($v['id']) ?>">
 
                             <textarea name="message" placeholder="Écris ton message..."></textarea>

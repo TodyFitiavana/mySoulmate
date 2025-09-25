@@ -79,7 +79,6 @@ class AuthController extends BaseController
         $matricule = $this->request->getPost('matricule');
         $password = $this->request->getPost('password');
 
-        echo $matricule;
 
         $user = $model->where('matricule', $matricule)->first();
         
@@ -96,7 +95,7 @@ class AuthController extends BaseController
                     'isLoggedIn' => true
                 ]);
 
-                return redirect()->to('/dashboard');
+                return redirect()->to($user['id'].'/publication');
             } else {
                 $message = ['message' => 'Mot de passe Incorrect'];
                 return view('Authentification/SignUp')

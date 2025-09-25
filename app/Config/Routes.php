@@ -6,7 +6,6 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 
-
 $routes->get('/(:num)/publication' ,'Pub::index/$1');
 $routes->get('/(:num)/AllPublication' ,'Pub::allPublication/$1');
 $routes->get('/(:num)/creation','Pub::creation/$1');

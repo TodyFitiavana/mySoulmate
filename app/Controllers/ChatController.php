@@ -79,7 +79,8 @@ class ChatController extends BaseController
     {
         $model_membre_conversation = new MembreConversationModel();
 
-        $message = $this->request->getPost('message');
+        $receiver_name = $this->request->getPost('receiver_name');
+        $message = "Hello babe ".$receiver_name;
         $receiver_id = $this->request->getPost('receiver_id');
         $sender_id = session('user_id');
 

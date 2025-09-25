@@ -18,10 +18,7 @@
             <h1>💚 mySoulmate</h1>
         </div>
         <div class="nav-menu">
-            <a href="<?= base_url('/publication') ?>" class="nav-item active">
-                <span class="nav-icon">📰</span>
-                Amies
-            </a>
+            
             <a href="<?= base_url('/'.$userId.'/AllPublication') ?>" class="nav-item active">
                 <span class="nav-icon">📰</span>
                 publication

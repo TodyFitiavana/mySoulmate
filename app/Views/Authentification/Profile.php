@@ -18,19 +18,20 @@
             <h1>💚 mySoulmate</h1>
         </div>
         <div class="nav-menu">
-            <a href="<?= base_url('/dashboard') ?>" class="nav-item active">
-                <span class="nav-icon">📰</span>
-                Amies
-            </a>
-            <a href="<?= base_url('/'.$userId) ?>" class="nav-item active">
+            
+            <a href="<?= base_url('/'.$userId.'/AllPublication') ?>" class="nav-item active">
                 <span class="nav-icon">📰</span>
                 publication
             </a>
-            <a href="<?= base_url('/chat') ?>" class="nav-item">
+            <a href="<?= base_url('/'.$userId.'/publication') ?>" class="nav-item active">
+                <span class="nav-icon">📰</span>
+                Mypublication
+            </a>
+            <a href="<?= base_url('/chat') ?>" class="nav-item active">
                 <span class="nav-icon">💬</span>
                 Messages
             </a>
-            <a href="<?= base_url('/profile') ?>" class="nav-item active">
+            <a href="<?= base_url('/profile') ?>" class="nav-item">
                 <span class="nav-icon">👤</span>
                 Profil
             </a>
@@ -40,7 +41,7 @@
             <span class="search-icon">🔍</span>
         </div>
         <div class="nav-logout">
-            <a href="<?= base_url('/auth') ?>" class="btn-logout">Déconnexion</a>
+            <a href="index.html" class="btn-logout">Déconnexion</a>
         </div>
     </nav>
 
